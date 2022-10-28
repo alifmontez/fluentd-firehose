@@ -11,10 +11,10 @@ FROM fluent/fluentd:v1.0-onbuild
 
 RUN apk add --update --virtual .build-deps \
         sudo build-base ruby-dev \
- && sudo gem install \
+RUN sudo gem install \
         fluent-plugin-kinesis \
- && sudo gem sources --clear-all \
- && apk add curl \
- && apk del .build-deps \
- && rm -rf /var/cache/apk/* \
+RUN sudo gem sources --clear-all \
+RUN apk add curl \
+RUN apk del .build-deps \
+RUN rm -rf /var/cache/apk/* \
            /home/fluent/.gem/ruby/2.4.0/cache/*.gem \
