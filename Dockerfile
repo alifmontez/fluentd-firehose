@@ -1,13 +1,8 @@
 # fluentd image based on alpine
 FROM fluent/fluentd:v1.7.4-1.0
 
-# Installs github.com/awslabs/aws-fluent-plugin-kinesis
+# Installs several plugins
 # Installs curl for container health check
-#
-# Other plugins which may be useful:
-# For CloudWatch Logs support: github.com/fluent-plugins-nursery/fluent-plugin-cloudwatch-logs
-# For multiline logging support: github.com/fluent-plugins-nursery/fluent-plugin-concat
-# For parsing docker container log lines that are JSON: https://github.com/edsiper/fluent-plugin-docker
 
 USER root
 
