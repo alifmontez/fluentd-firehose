@@ -2,6 +2,6 @@
 FROM grafana/fluent-plugin-loki:latest
 
 USER root
-RUN apk --no-cache add curl
+RUN sudo apt -y install curl
 
 ADD fluent.conf /fluentd/etc/
