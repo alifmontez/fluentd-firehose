@@ -2,6 +2,6 @@
 FROM grafana/fluent-plugin-loki:latest
 
 USER root
-RUN sudo apt -y install curl
+RUN apt -y install curl
 
 ADD fluent.conf /fluentd/etc/
